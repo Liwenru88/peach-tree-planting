@@ -3,6 +3,8 @@ from enum import Enum
 
 from pydantic import BaseModel, Field
 
+from app.schemas.data_labeling import LabelingInfoSchema
+
 
 class KnowledgeAdvancedSearch(BaseModel):
     """知识高级搜索Schema"""
@@ -19,3 +21,9 @@ class CreateUserSchema(BaseModel):
     email: str = Field(..., description="邮箱", title="email")
     phone: str = Field(..., description="手机号", title="phone")
     role_id: int = Field(..., description="角色id", title="role_id")
+
+
+class DataLabelingSchema(BaseModel):
+    """数据标注Schema"""
+    data_id: int = Field(..., description="数据id", title="data_id")
+    labeling_info: LabelingInfoSchema = Field(..., description="标注信息", title="labeling_info")
