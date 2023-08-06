@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "peach-tree-planting"
+version = "0.1.0"
+description = ""
+authors = ["WenruLi"]
+readme = "README.md"
+packages = [{include = "peach_tree_planting"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+fastapi = "^0.100.0"
+uvicorn = "^0.22.0"
+python-dotenv = "^1.0.0"
+aioredis = "^2.0.1"
+beanie = "^1.20.0"
+elasticsearch = {extras = ["async"], version = "^8.8.2"}
+orjson = "^3.9.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
